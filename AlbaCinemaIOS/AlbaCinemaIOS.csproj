@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{5578D5D7-D6DD-4B06-98A3-A58539D57F6F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AlbaCinemaIOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>AlbaCinemaIOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFastDev>true</MtouchFastDev>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchDebug>true</MtouchDebug>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="REFrostedViewController">
+      <HintPath>..\Components\refrostedviewcontroller-1.0\lib\ios-unified\REFrostedViewController.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="Web References\ws\DataService.disco" />
+    <None Include="Web References\ws\DataService.wsdl" />
+    <None Include="Web References\ws\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsTicketing\TicketingService.wsdl" />
+    <None Include="Web References\wsTicketing\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DEMOHomeViewController.cs" />
+    <Compile Include="Controllers\DEMOMenuViewController.cs" />
+    <Compile Include="Sources\DEMOMenuViewControllerSource.cs" />
+    <Compile Include="Controllers\DEMOSecondViewController.cs" />
+    <Compile Include="Controllers\BistroViewController.cs" />
+    <Compile Include="Controllers\EstrenosViewController.cs" />
+    <Compile Include="Web References\ws\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsTicketing\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\AreaCategory.cs" />
+    <Compile Include="Models\AsientosModel.cs" />
+    <Compile Include="Models\CinemaSiteGroupLine.cs" />
+    <Compile Include="Models\CinemaSiteGroupLinkLine.cs" />
+    <Compile Include="Models\ConcessionPrintStream.cs" />
+    <Compile Include="Models\ConfirmationDetailsType.cs" />
+    <Compile Include="Models\CreateClientRequest.cs" />
+    <Compile Include="Models\DataResponse.cs" />
+    <Compile Include="Models\GetCinemaListAllRequest.cs" />
+    <Compile Include="Models\GetCinemaListRequest.cs" />
+    <Compile Include="Models\GetCinemaOpForSessionRequest.cs" />
+    <Compile Include="Models\GetCinemaSiteGroupsRequest.cs" />
+    <Compile Include="Models\GetCinemaSiteGroupsResponse.cs" />
+    <Compile Include="Models\GetClientListRequest.cs" />
+    <Compile Include="Models\GetConcessionItemsListRequest.cs" />
+    <Compile Include="Models\GetConcessionPrintStreamsRequest.cs" />
+    <Compile Include="Models\GetConcessionPrintStreamsResponse.cs" />
+    <Compile Include="Models\GetConfigSettingListRequest.cs" />
+    <Compile Include="Models\GetConfirmationDetailsRequest.cs" />
+    <Compile Include="Models\GetEventListRequest.cs" />
+    <Compile Include="Models\GetEventMovieListRequest.cs" />
+    <Compile Include="Models\GetLtyMembershipConcessionItemRequest.cs" />
+    <Compile Include="Models\GetMovieInfoListRequest.cs" />
+    <Compile Include="Models\GetMovieListRequest.cs" />
+    <Compile Include="Models\GetMoviePeopleRequest.cs" />
+    <Compile Include="Models\GetMovieShowtimesRequest.cs" />
+    <Compile Include="Models\GetOrderHistoryRequest.cs" />
+    <Compile Include="Models\GetOrderHistoryResponse.cs" />
+    <Compile Include="Models\GetPrintStreamRequest.cs" />
+    <Compile Include="Models\GetProductInfoRequest.cs" />
+    <Compile Include="Models\GetSessionInfoRequest.cs" />
+    <Compile Include="Models\GetSessionListRequest.cs" />
+    <Compile Include="Models\GetSessionSeatPlanRequest.cs" />
+    <Compile Include="Models\GetSessionSeatPlanResponse.cs" />
+    <Compile Include="Models\GetShowtimeDateListRequest.cs" />
+    <Compile Include="Models\GetTicketTypeFromBarcodeRequest.cs" />
+    <Compile Include="Models\GetTicketTypeListRequest.cs" />
+    <Compile Include="Models\GetTicketTypePackageRequest.cs" />
+    <Compile Include="Models\GiftCardBalanceMethod.cs" />
+    <Compile Include="Models\GiftCardBalanceRequest.cs" />
+    <Compile Include="Models\MasterPageItem.cs" />
+    <Compile Include="Models\MovieTypeFlag.cs" />
+    <Compile Include="Models\NoticiasModel.cs" />
+    <Compile Include="Models\OrderHistoryLine.cs" />
+    <Compile Include="Models\PagosModel.cs" />
+    <Compile Include="Models\PeliculasModel.cs" />
+    <Compile Include="Models\PrintDocumentType.cs" />
+    <Compile Include="Models\Request.cs" />
+    <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\ResultCode.cs" />
+    <Compile Include="Models\ResultCode1.cs" />
+    <Compile Include="Models\Row.cs" />
+    <Compile Include="Models\SalasModel.cs" />
+    <Compile Include="Models\Seat.cs" />
+    <Compile Include="Models\SeatInfo.cs" />
+    <Compile Include="Models\SeatPosition.cs" />
+    <Compile Include="Models\Theatre.cs" />
+    <Compile Include="Models\TicketsModel.cs" />
+    <Compile Include="Models\TipCalcModel.cs" />
+    <Compile Include="Models\UpdateClientRequest.cs" />
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\TicketingService.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\PeliculasClass.cs" />
+    <Compile Include="Data\TuplaClass.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="XML\GetCinemaListAllClass.cs" />
+    <Compile Include="XML\GetMovieInfoListClass.cs" />
+    <Compile Include="XML\GetMovieListClass.cs" />
+    <Compile Include="XML\GetMovieShowtimesClass.cs" />
+    <Compile Include="XML\GetTicketTypeListClass.cs" />
+    <Compile Include="Sources\EstrenosSource.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="refrostedviewcontroller">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Sources\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\" />
+    <Folder Include="XML\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="ball%402x.png" />
+    <BundleResource Include="Resources\monkey.png" />
+    <BundleResource Include="Resources\about-48%402x.png" />
+    <BundleResource Include="Resources\ask_question-48%402x.png" />
+    <BundleResource Include="Resources\business_contact-48%402x.png" />
+    <BundleResource Include="Resources\home-48%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://webservice.albacinema.com.gt/WSVistaWebClient/DataService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ws</RelPath>
+      <UpdateFromURL>https://webservice.albacinema.com.gt/WSVistaWebClient/DataService.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://webservice.albacinema.com.gt/WSVistaWebClient/TicketingService.asmx?wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsTicketing</RelPath>
+      <UpdateFromURL>https://webservice.albacinema.com.gt/WSVistaWebClient/TicketingService.asmx?wsdl</UpdateFromURL>
+    </WebReferenceUrl>
+  </ItemGroup>
+</Project>

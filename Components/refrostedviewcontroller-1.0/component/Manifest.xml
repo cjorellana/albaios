@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="refrostedviewcontroller">
+  <name>REFrostedViewController</name>
+  <publisher>Xamarin Inc</publisher>
+  <publisher-url>http://www.xamarin.com/</publisher-url>
+  <src-url>https://github.com/romaonthego/REFrostedViewController</src-url>
+  <version>1.0</version>
+  <summary>iOS 7/8 style blurred view controller that appears on top of your view controller.</summary>
+  <screenshots>
+    <img src="screenshots/Screenshot1.jpg" title="Screenshot1" />
+  </screenshots>
+  <samples>
+    <sample id="REFrostedViewController">
+      <name>iOS Unified Sample</name>
+      <summary>iOS Unified Sample</summary>
+    </sample>
+  </samples>
+</component>

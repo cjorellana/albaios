@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/" xmlns:s1="http://vista.co.nz/services/WSVistaWebClient.DataTypes/1/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s3="http://microsoft.com/wsdl/types/" xmlns:tns="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/">
+      <s:element name="GetCinemaListRequest" type="s0:GetCinemaListRequest" />
+      <s:complexType name="GetCinemaListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalMovieName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalOperatorCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalIncludeOperator" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalOrderByOperator" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalCinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalBizDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalBizStartTimeOfDay" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalIncludeGiftStores" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCinemaListAllRequest" type="s0:GetCinemaListAllRequest" />
+      <s:complexType name="GetCinemaListAllRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalIncludeOperator" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalOrderByOperator" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalIncludeGiftStores" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCinemaOpForSessionRequest" type="s0:GetCinemaOpForSessionRequest" />
+      <s:complexType name="GetCinemaOpForSessionRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSessionSeatPlanRequest" type="s0:GetSessionSeatPlanRequest" />
+      <s:complexType name="GetSessionSeatPlanRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://vista.co.nz/services/WSVistaWebClient.DataTypes/1/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetCinemaListResult" type="s1:DataResponse" />
+      <s:complexType name="DataResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s1:ResultCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="DatasetXML" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ResultCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="UnexpectedError" />
+          <s:enumeration value="DBError" />
+          <s:enumeration value="MembershipError" />
+          <s:enumeration value="InvalidRequestData" />
+          <s:enumeration value="CinemaConnectError" />
+          <s:enumeration value="LoyaltyConnectError" />
+          <s:enumeration value="InsufficientPoints" />
+          <s:enumeration value="SeatsUnavailable" />
+          <s:enumeration value="FailedSeatDataRetrieve" />
+          <s:enumeration value="FailedOrderValueProcess" />
+          <s:enumeration value="PrepareOrderForCompleteError" />
+          <s:enumeration value="PaymentDeclined" />
+          <s:enumeration value="PaymentSystemError" />
+          <s:enumeration value="PostChargeCommitError" />
+          <s:enumeration value="UnpaidBookingsDisallowed" />
+          <s:enumeration value="VouchersDisallowed" />
+          <s:enumeration value="MemberNotFound" />
+          <s:enumeration value="MemberPasswordIncorrect" />
+          <s:enumeration value="LoyaltyTimeout" />
+          <s:enumeration value="LoyaltyUserNameAlreadyExists" />
+          <s:enumeration value="LoyaltyNotSupportedAtCinema" />
+          <s:enumeration value="MemberEmailIncorrect" />
+          <s:enumeration value="MemberLoginResetDisallowed" />
+          <s:enumeration value="PaymentSuccessWithErrors" />
+          <s:enumeration value="PaymentVoidSuccessPostCommit" />
+          <s:enumeration value="PaymentVoidSuccessPreCommit" />
+          <s:enumeration value="PaymentVoidSuccessPayTotalMismatch" />
+          <s:enumeration value="FailedToAllocateCard" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetCinemaListAllResult" type="s1:DataResponse" />
+      <s:element name="GetMovieListRequest" type="s1:GetMovieListRequest" />
+      <s:complexType name="GetMovieListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalCinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalOperatorCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalOrderByOperator" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalBizDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalBizStartTimeOfDay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalIncludeGiftStores" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMovieListResult" type="s1:DataResponse" />
+      <s:element name="GetMovieInfoListRequest" type="s1:GetMovieInfoListRequest" />
+      <s:complexType name="GetMovieInfoListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalMovieName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalTypeFlag" type="s1:MovieTypeFlag" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="MovieTypeFlag">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotSet" />
+          <s:enumeration value="Feature" />
+          <s:enumeration value="NowShowing" />
+          <s:enumeration value="ComingSoon" />
+          <s:enumeration value="ComingSoonOnSale" />
+          <s:enumeration value="ComingSoonNoSession" />
+          <s:enumeration value="NowShowingToday" />
+          <s:enumeration value="NowShowingOnSale" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetMovieInfoListResult" type="s1:DataResponse" />
+      <s:element name="GetMoviePeopleRequest" type="s1:GetMoviePeopleRequest" />
+      <s:complexType name="GetMoviePeopleRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MovieId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMoviePeopleResult" type="s1:DataResponse" />
+      <s:element name="GetSessionListRequest" type="s1:GetSessionListRequest" />
+      <s:complexType name="GetSessionListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MovieId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalMovieId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalMovieName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalOperatorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalEventCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalBizStartHourOfDay" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalBizDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalSessionDisplayCutOff" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSessionListResult" type="s1:DataResponse" />
+      <s:element name="GetSessionInfoRequest" type="s1:GetSessionInfoRequest" />
+      <s:complexType name="GetSessionInfoRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSessionInfoResult" type="s1:DataResponse" />
+      <s:element name="GetTicketTypeListRequest" type="s1:GetTicketTypeListRequest" />
+      <s:complexType name="GetTicketTypeListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalUserSessionIdForLoyaltyTickets" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalLoyaltyTicketMatchesHOCode" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalShowNonATMTickets" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalReturnAllRedemptionAndCompTickets" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalReturnAllLoyaltyTickets" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalAreaCategoryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalReturnLoyaltyRewardFlag" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalSeparatePaymentBasedTickets" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalShowLoyaltyTicketsToNonMembers" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalEnforceChildTicketLogic" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalIncludeZeroValueTickets" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketTypeListResult" type="s1:DataResponse" />
+      <s:element name="GetTicketTypeFromBarcodeRequest" type="s1:GetTicketTypeFromBarcodeRequest" />
+      <s:complexType name="GetTicketTypeFromBarcodeRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketTypeFromBarcodeResult" type="s1:DataResponse" />
+      <s:element name="GetTicketTypePackageRequest" type="s1:GetTicketTypePackageRequest" />
+      <s:complexType name="GetTicketTypePackageRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketTypeCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTicketTypePackageResult" type="s1:DataResponse" />
+      <s:element name="GetEventListRequest" type="s1:GetEventListRequest" />
+      <s:complexType name="GetEventListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeFlag" type="s1:MovieTypeFlag" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalMovieName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalOperatorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalEventCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEventListResult" type="s1:DataResponse" />
+      <s:element name="GetEventMovieListRequest" type="s1:GetEventMovieListRequest" />
+      <s:complexType name="GetEventMovieListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEventMovieListResult" type="s1:DataResponse" />
+      <s:element name="GetShowtimeDateListRequest" type="s1:GetShowtimeDateListRequest" />
+      <s:complexType name="GetShowtimeDateListRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OptionalBizStartHourOfDay" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetShowtimeDateListResult" type="s1:DataResponse" />
+      <s:element name="GetCinemaOpForSessionResult" type="s1:DataResponse" />
+      <s:element name="GetPrintStreamResult" type="s1:DataResponse" />
+      <s:element name="GetConfirmationDetailsRequest" type="s1:GetConfirmationDetailsRequest" />
+      <s:complexType name="GetConfirmationDetailsRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ConfirmationDetailsType" type="s1:ConfirmationDetailsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VistaBookingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VistaTransNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalHistoryID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ConfirmationDetailsType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Booking" />
+          <s:enumeration value="Tickets" />
+          <s:enumeration value="Seats" />
+          <s:enumeration value="Inventory" />
+          <s:enumeration value="PaymentLines" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetConfirmationDetailsResult" type="s1:DataResponse" />
+      <s:element name="GetConcessionItemsListRequest" type="s1:GetConcessionItemsListRequest" />
+      <s:complexType name="GetConcessionItemsListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderUserId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetConcessionItemsListResult" type="s1:DataResponse" />
+      <s:element name="GetMovieShowtimesRequest" type="s1:GetMovieShowtimesRequest" />
+      <s:complexType name="GetMovieShowtimesRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BizDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BizStartTimeOfDay" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderMode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalSessionDisplayCutOffInMins" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllSalesChannels" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMovieShowtimesResult" type="s1:DataResponse" />
+      <s:element name="GetProductInfoRequest" type="s1:GetProductInfoRequest" />
+      <s:complexType name="GetProductInfoRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProductInfoResult" type="s1:DataResponse" />
+      <s:element name="GetClientListRequest" type="s1:GetClientListRequest" />
+      <s:complexType name="GetClientListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalClientDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClientListResult" type="s1:DataResponse" />
+      <s:element name="GCBalanceRequest" type="s1:GiftCardBalanceRequest" />
+      <s:complexType name="GiftCardBalanceRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Request">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="UseGiftCardBalanceMethod" type="s1:GiftCardBalanceMethod" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardExpiry" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardExpiryMonth" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardExpiryYear" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CardBalance" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CinemaID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Request">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserSessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerLanguageTag" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="GiftCardBalanceMethod">
+        <s:restriction base="s:string">
+          <s:enumeration value="CardNum" />
+          <s:enumeration value="CardExpiry" />
+          <s:enumeration value="CardExpiryMY" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GiftCardBalanceRequestResult" type="s1:DataResponse" />
+      <s:element name="CreateClientRequest" type="s1:CreateClientRequest" />
+      <s:complexType name="CreateClientRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkstationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesChannel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientClass" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateClientRequest" type="s1:UpdateClientRequest" />
+      <s:complexType name="UpdateClientRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CreateClientRequest">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="s3:char" />
+              <s:element minOccurs="0" maxOccurs="1" name="ConfigXml" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetLtyMembershipConcessionItemResult" type="s1:DataResponse" />
+      <s:element name="GetConfigSettingListResult" type="s1:DataResponse" />
+      <s:element name="GetCinemaSiteGroupsRequest" type="s1:GetCinemaSiteGroupsRequest" />
+      <s:complexType name="GetCinemaSiteGroupsRequest" />
+      <s:element name="GetConcessionPrintStreamsRequest" type="s1:GetConcessionPrintStreamsRequest" />
+      <s:complexType name="GetConcessionPrintStreamsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VistaTransactionId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SequenceNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1">
+      <s:element name="GetPrintStreamRequest" type="tns:GetPrintStreamRequest" />
+      <s:complexType name="GetPrintStreamRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserSessionId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintDocumentType" type="tns:PrintDocumentType" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrintDocumentCode" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PrintDocumentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="All" />
+          <s:enumeration value="BookingVoucher" />
+          <s:enumeration value="Receipt" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateClientResult" type="tns:Response" />
+      <s:complexType name="Response">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:ResultCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ResultCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="UnexpectedError" />
+          <s:enumeration value="DBError" />
+          <s:enumeration value="MembershipError" />
+          <s:enumeration value="InvalidRequestData" />
+          <s:enumeration value="CinemaConnectError" />
+          <s:enumeration value="LoyaltyConnectError" />
+          <s:enumeration value="InsufficientPoints" />
+          <s:enumeration value="SeatsUnavailable" />
+          <s:enumeration value="FailedSeatDataRetrieve" />
+          <s:enumeration value="FailedOrderValueProcess" />
+          <s:enumeration value="PrepareOrderForCompleteError" />
+          <s:enumeration value="PaymentDeclined" />
+          <s:enumeration value="PaymentSystemError" />
+          <s:enumeration value="PostChargeCommitError" />
+          <s:enumeration value="UnpaidBookingsDisallowed" />
+          <s:enumeration value="VouchersDisallowed" />
+          <s:enumeration value="MemberNotFound" />
+          <s:enumeration value="MemberPasswordIncorrect" />
+          <s:enumeration value="LoyaltyTimeout" />
+          <s:enumeration value="LoyaltyUserNameAlreadyExists" />
+          <s:enumeration value="LoyaltyNotSupportedAtCinema" />
+          <s:enumeration value="MemberEmailIncorrect" />
+          <s:enumeration value="MemberLoginResetDisallowed" />
+          <s:enumeration value="PaymentSuccessWithErrors" />
+          <s:enumeration value="PaymentVoidSuccessPostCommit" />
+          <s:enumeration value="PaymentVoidSuccessPreCommit" />
+          <s:enumeration value="PaymentVoidSuccessPayTotalMismatch" />
+          <s:enumeration value="FailedToAllocateCard" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UpdateClientResult" type="tns:Response" />
+      <s:element name="GetLtyMembershipConcessionItemRequest" type="tns:GetLtyMembershipConcessionItemRequest" />
+      <s:complexType name="GetLtyMembershipConcessionItemRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetConfigSettingListRequest" type="tns:GetConfigSettingListRequest" />
+      <s:complexType name="GetConfigSettingListRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SettingNames" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetOrderHistoryRequest" type="tns:GetOrderHistoryRequest" />
+      <s:complexType name="GetOrderHistoryRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MemberEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoyaltyMemberId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetOrderHistoryResult" type="tns:GetOrderHistoryResponse" />
+      <s:complexType name="GetOrderHistoryResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Response">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="NonPackageTickets" type="tns:ArrayOfOrderHistoryLine" />
+              <s:element minOccurs="0" maxOccurs="1" name="PackageTickets" type="tns:ArrayOfOrderHistoryLine" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderHistoryLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderHistoryLine" nillable="true" type="tns:OrderHistoryLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderHistoryLine">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="InitiatedTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MovieName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoveNameAlt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TicketPriceInCents" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketDescriptionAlt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SessionTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeatRowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeatNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BookingFeeInCents" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPaid" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PackageGroupNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentTicketTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentTicketDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentTicketDescriptionAlt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageSeats" type="tns:ArrayOfSeatInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSeatInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SeatInfo" nillable="true" type="tns:SeatInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SeatInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SeatRowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeatNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCinemaSiteGroupsResult" type="tns:GetCinemaSiteGroupsResponse" />
+      <s:complexType name="GetCinemaSiteGroupsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaSiteGroups" type="tns:ArrayOfCinemaSiteGroupLine" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaSiteGroupLinks" type="tns:ArrayOfCinemaSiteGroupLinkLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCinemaSiteGroupLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CinemaSiteGroupLine" nillable="true" type="tns:CinemaSiteGroupLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CinemaSiteGroupLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaSiteGroupId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AreaCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCinemaSiteGroupLinkLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CinemaSiteGroupLinkLine" nillable="true" type="tns:CinemaSiteGroupLinkLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CinemaSiteGroupLinkLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaSiteGroupId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetConcessionPrintStreamsResult" type="tns:GetConcessionPrintStreamsResponse" />
+      <s:complexType name="GetConcessionPrintStreamsResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ConcessionPrintStreams" type="tns:ArrayOfConcessionPrintStream" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConcessionPrintStream">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConcessionPrintStream" nillable="true" type="tns:ConcessionPrintStream" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConcessionPrintStream">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemSequence" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrintStream" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CinemaId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSessionSeatPlanResult" type="tns:GetSessionSeatPlanResponse" />
+      <s:complexType name="GetSessionSeatPlanResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SeatLayoutData" type="tns:Theatre" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Theatre">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Areas" type="tns:ArrayOfArea" />
+          <s:element minOccurs="0" maxOccurs="1" name="AreaCategories" type="tns:ArrayOfAreaCategory" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoundaryRight" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoundaryLeft" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoundaryTop" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ScreenStart" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ScreenWidth" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfArea">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Area" nillable="true" type="tns:Area" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Area">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Number" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AreaCategoryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionAlt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfSeats" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsAllocatedSeating" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasSofaSeatingEnabled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Left" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Top" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Height" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" nillable="true" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rows" type="tns:ArrayOfRow" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ColumnCount" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRow">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Row" nillable="true" type="tns:Row" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Row">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PhysicalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seats" type="tns:ArrayOfSeat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSeat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Seat" nillable="true" type="tns:Seat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Seat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Position" type="tns:SeatPosition" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:SeatStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeatStyle" type="tns:SeatStyle" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeatsInGroup" type="tns:ArrayOfSeatPosition" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SeatPosition">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AreaNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowIndex" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ColumnIndex" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SeatStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Empty" />
+          <s:enumeration value="Sold" />
+          <s:enumeration value="House" />
+          <s:enumeration value="Special" />
+          <s:enumeration value="Reserved" />
+          <s:enumeration value="Broken" />
+          <s:enumeration value="Placeholder" />
+          <s:enumeration value="Companion" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SeatStyle">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="SofaLeft" />
+          <s:enumeration value="SofaMiddle" />
+          <s:enumeration value="SofaRight" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSeatPosition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SeatPosition" nillable="true" type="tns:SeatPosition" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAreaCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AreaCategory" nillable="true" type="tns:AreaCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AreaCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AreaCategoryCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeatsToAllocate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeatsAllocatedCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeatsNotAllocatedCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SelectedSeats" type="tns:ArrayOfSeatPosition" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCinemaListSoapIn">
+    <wsdl:part name="GetCinemaListRequest" element="s0:GetCinemaListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaListSoapOut">
+    <wsdl:part name="GetCinemaListResult" element="s1:GetCinemaListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaListAllSoapIn">
+    <wsdl:part name="GetCinemaListAllRequest" element="s0:GetCinemaListAllRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaListAllSoapOut">
+    <wsdl:part name="GetCinemaListAllResult" element="s1:GetCinemaListAllResult" />
+  </wsdl:message>
+  <wsdl:message name="GetMovieListSoapIn">
+    <wsdl:part name="GetMovieListRequest" element="s1:GetMovieListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMovieListSoapOut">
+    <wsdl:part name="GetMovieListResult" element="s1:GetMovieListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetMovieInfoListSoapIn">
+    <wsdl:part name="GetMovieInfoListRequest" element="s1:GetMovieInfoListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMovieInfoListSoapOut">
+    <wsdl:part name="GetMovieInfoListResult" element="s1:GetMovieInfoListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetMoviePeopleSoapIn">
+    <wsdl:part name="GetMoviePeopleRequest" element="s1:GetMoviePeopleRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMoviePeopleSoapOut">
+    <wsdl:part name="GetMoviePeopleResult" element="s1:GetMoviePeopleResult" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionListSoapIn">
+    <wsdl:part name="GetSessionListRequest" element="s1:GetSessionListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionListSoapOut">
+    <wsdl:part name="GetSessionListResult" element="s1:GetSessionListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoSoapIn">
+    <wsdl:part name="GetSessionInfoRequest" element="s1:GetSessionInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoSoapOut">
+    <wsdl:part name="GetSessionInfoResult" element="s1:GetSessionInfoResult" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTypeListSoapIn">
+    <wsdl:part name="GetTicketTypeListRequest" element="s1:GetTicketTypeListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTypeListSoapOut">
+    <wsdl:part name="GetTicketTypeListResult" element="s1:GetTicketTypeListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTypeFromBarcodeSoapIn">
+    <wsdl:part name="GetTicketTypeFromBarcodeRequest" element="s1:GetTicketTypeFromBarcodeRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTypeFromBarcodeSoapOut">
+    <wsdl:part name="GetTicketTypeFromBarcodeResult" element="s1:GetTicketTypeFromBarcodeResult" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTypePackageSoapIn">
+    <wsdl:part name="GetTicketTypePackageRequest" element="s1:GetTicketTypePackageRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketTypePackageSoapOut">
+    <wsdl:part name="GetTicketTypePackageResult" element="s1:GetTicketTypePackageResult" />
+  </wsdl:message>
+  <wsdl:message name="GetEventListSoapIn">
+    <wsdl:part name="GetEventListRequest" element="s1:GetEventListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEventListSoapOut">
+    <wsdl:part name="GetEventListResult" element="s1:GetEventListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetEventMovieListSoapIn">
+    <wsdl:part name="GetEventMovieListRequest" element="s1:GetEventMovieListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEventMovieListSoapOut">
+    <wsdl:part name="GetEventMovieListResult" element="s1:GetEventMovieListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetShowtimeDateListSoapIn">
+    <wsdl:part name="GetShowtimeDateListRequest" element="s1:GetShowtimeDateListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetShowtimeDateListSoapOut">
+    <wsdl:part name="GetShowtimeDateListResult" element="s1:GetShowtimeDateListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaOpForSessionSoapIn">
+    <wsdl:part name="GetCinemaOpForSessionRequest" element="s0:GetCinemaOpForSessionRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaOpForSessionSoapOut">
+    <wsdl:part name="GetCinemaOpForSessionResult" element="s1:GetCinemaOpForSessionResult" />
+  </wsdl:message>
+  <wsdl:message name="GetPrintStreamSoapIn">
+    <wsdl:part name="GetPrintStreamRequest" element="tns:GetPrintStreamRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPrintStreamSoapOut">
+    <wsdl:part name="GetPrintStreamResult" element="s1:GetPrintStreamResult" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmationDetailsSoapIn">
+    <wsdl:part name="GetConfirmationDetailsRequest" element="s1:GetConfirmationDetailsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmationDetailsSoapOut">
+    <wsdl:part name="GetConfirmationDetailsResult" element="s1:GetConfirmationDetailsResult" />
+  </wsdl:message>
+  <wsdl:message name="GetConcessionItemsListSoapIn">
+    <wsdl:part name="GetConcessionItemsListRequest" element="s1:GetConcessionItemsListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetConcessionItemsListSoapOut">
+    <wsdl:part name="GetConcessionItemsListResult" element="s1:GetConcessionItemsListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetMovieShowtimesSoapIn">
+    <wsdl:part name="GetMovieShowtimesRequest" element="s1:GetMovieShowtimesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMovieShowtimesSoapOut">
+    <wsdl:part name="GetMovieShowtimesResult" element="s1:GetMovieShowtimesResult" />
+  </wsdl:message>
+  <wsdl:message name="GetProductInfoSoapIn">
+    <wsdl:part name="GetProductInfoRequest" element="s1:GetProductInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetProductInfoSoapOut">
+    <wsdl:part name="GetProductInfoResult" element="s1:GetProductInfoResult" />
+  </wsdl:message>
+  <wsdl:message name="GetClientListSoapIn">
+    <wsdl:part name="GetClientListRequest" element="s1:GetClientListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetClientListSoapOut">
+    <wsdl:part name="GetClientListResult" element="s1:GetClientListResult" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardBalanceRequestSoapIn">
+    <wsdl:part name="GCBalanceRequest" element="s1:GCBalanceRequest" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardBalanceRequestSoapOut">
+    <wsdl:part name="GiftCardBalanceRequestResult" element="s1:GiftCardBalanceRequestResult" />
+  </wsdl:message>
+  <wsdl:message name="CreateClientSoapIn">
+    <wsdl:part name="CreateClientRequest" element="s1:CreateClientRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateClientSoapOut">
+    <wsdl:part name="CreateClientResult" element="tns:CreateClientResult" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientSoapIn">
+    <wsdl:part name="UpdateClientRequest" element="s1:UpdateClientRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientSoapOut">
+    <wsdl:part name="UpdateClientResult" element="tns:UpdateClientResult" />
+  </wsdl:message>
+  <wsdl:message name="GetLtyMembershipConcessionItemSoapIn">
+    <wsdl:part name="GetLtyMembershipConcessionItemRequest" element="tns:GetLtyMembershipConcessionItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetLtyMembershipConcessionItemSoapOut">
+    <wsdl:part name="GetLtyMembershipConcessionItemResult" element="s1:GetLtyMembershipConcessionItemResult" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigSettingListSoapIn">
+    <wsdl:part name="GetConfigSettingListRequest" element="tns:GetConfigSettingListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigSettingListSoapOut">
+    <wsdl:part name="GetConfigSettingListResult" element="s1:GetConfigSettingListResult" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderHistorySoapIn">
+    <wsdl:part name="GetOrderHistoryRequest" element="tns:GetOrderHistoryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderHistorySoapOut">
+    <wsdl:part name="GetOrderHistoryResult" element="tns:GetOrderHistoryResult" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaSiteGroupsSoapIn">
+    <wsdl:part name="GetCinemaSiteGroupsRequest" element="s1:GetCinemaSiteGroupsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCinemaSiteGroupsSoapOut">
+    <wsdl:part name="GetCinemaSiteGroupsResult" element="tns:GetCinemaSiteGroupsResult" />
+  </wsdl:message>
+  <wsdl:message name="GetConcessionPrintStreamsSoapIn">
+    <wsdl:part name="GetConcessionPrintStreamsRequest" element="s1:GetConcessionPrintStreamsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetConcessionPrintStreamsSoapOut">
+    <wsdl:part name="GetConcessionPrintStreamsResult" element="tns:GetConcessionPrintStreamsResult" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionSeatPlanSoapIn">
+    <wsdl:part name="GetSessionSeatPlanRequest" element="s0:GetSessionSeatPlanRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionSeatPlanSoapOut">
+    <wsdl:part name="GetSessionSeatPlanResult" element="tns:GetSessionSeatPlanResult" />
+  </wsdl:message>
+  <wsdl:portType name="DataService">
+    <wsdl:operation name="GetCinemaList">
+      <wsdl:input message="tns:GetCinemaListSoapIn" />
+      <wsdl:output message="tns:GetCinemaListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCinemaListAll">
+      <wsdl:input message="tns:GetCinemaListAllSoapIn" />
+      <wsdl:output message="tns:GetCinemaListAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieList">
+      <wsdl:input message="tns:GetMovieListSoapIn" />
+      <wsdl:output message="tns:GetMovieListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieInfoList">
+      <wsdl:input message="tns:GetMovieInfoListSoapIn" />
+      <wsdl:output message="tns:GetMovieInfoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoviePeople">
+      <wsdl:input message="tns:GetMoviePeopleSoapIn" />
+      <wsdl:output message="tns:GetMoviePeopleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionList">
+      <wsdl:input message="tns:GetSessionListSoapIn" />
+      <wsdl:output message="tns:GetSessionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <wsdl:input message="tns:GetSessionInfoSoapIn" />
+      <wsdl:output message="tns:GetSessionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTypeList">
+      <wsdl:input message="tns:GetTicketTypeListSoapIn" />
+      <wsdl:output message="tns:GetTicketTypeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTypeFromBarcode">
+      <wsdl:input message="tns:GetTicketTypeFromBarcodeSoapIn" />
+      <wsdl:output message="tns:GetTicketTypeFromBarcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTypePackage">
+      <wsdl:input message="tns:GetTicketTypePackageSoapIn" />
+      <wsdl:output message="tns:GetTicketTypePackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventList">
+      <wsdl:input message="tns:GetEventListSoapIn" />
+      <wsdl:output message="tns:GetEventListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventMovieList">
+      <wsdl:input message="tns:GetEventMovieListSoapIn" />
+      <wsdl:output message="tns:GetEventMovieListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowtimeDateList">
+      <wsdl:input message="tns:GetShowtimeDateListSoapIn" />
+      <wsdl:output message="tns:GetShowtimeDateListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCinemaOpForSession">
+      <wsdl:input message="tns:GetCinemaOpForSessionSoapIn" />
+      <wsdl:output message="tns:GetCinemaOpForSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintStream">
+      <wsdl:input message="tns:GetPrintStreamSoapIn" />
+      <wsdl:output message="tns:GetPrintStreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmationDetails">
+      <wsdl:input message="tns:GetConfirmationDetailsSoapIn" />
+      <wsdl:output message="tns:GetConfirmationDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConcessionItemsList">
+      <wsdl:input message="tns:GetConcessionItemsListSoapIn" />
+      <wsdl:output message="tns:GetConcessionItemsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieShowtimes">
+      <wsdl:input message="tns:GetMovieShowtimesSoapIn" />
+      <wsdl:output message="tns:GetMovieShowtimesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <wsdl:input message="tns:GetProductInfoSoapIn" />
+      <wsdl:output message="tns:GetProductInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <wsdl:input message="tns:GetClientListSoapIn" />
+      <wsdl:output message="tns:GetClientListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardBalanceRequest">
+      <wsdl:input message="tns:GiftCardBalanceRequestSoapIn" />
+      <wsdl:output message="tns:GiftCardBalanceRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateClient">
+      <wsdl:input message="tns:CreateClientSoapIn" />
+      <wsdl:output message="tns:CreateClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <wsdl:input message="tns:UpdateClientSoapIn" />
+      <wsdl:output message="tns:UpdateClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLtyMembershipConcessionItem">
+      <wsdl:input message="tns:GetLtyMembershipConcessionItemSoapIn" />
+      <wsdl:output message="tns:GetLtyMembershipConcessionItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingList">
+      <wsdl:input message="tns:GetConfigSettingListSoapIn" />
+      <wsdl:output message="tns:GetConfigSettingListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHistory">
+      <wsdl:input message="tns:GetOrderHistorySoapIn" />
+      <wsdl:output message="tns:GetOrderHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCinemaSiteGroups">
+      <wsdl:input message="tns:GetCinemaSiteGroupsSoapIn" />
+      <wsdl:output message="tns:GetCinemaSiteGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConcessionPrintStreams">
+      <wsdl:input message="tns:GetConcessionPrintStreamsSoapIn" />
+      <wsdl:output message="tns:GetConcessionPrintStreamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionSeatPlan">
+      <wsdl:input message="tns:GetSessionSeatPlanSoapIn" />
+      <wsdl:output message="tns:GetSessionSeatPlanSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataService" type="tns:DataService">
+    <wsdl:documentation>
+      <wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.1" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" />
+    </wsdl:documentation>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCinemaList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetCinemaList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCinemaListAll">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetCinemaListAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetMovieList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieInfoList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetMovieInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoviePeople">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetMoviePeople" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetSessionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetSessionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTypeList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetTicketTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTypeFromBarcode">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetTicketTypeFromBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketTypePackage">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetTicketTypePackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetEventList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventMovieList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetEventMovieList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowtimeDateList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetShowtimeDateList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCinemaOpForSession">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetCinemaOpForSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintStream">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetPrintStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmationDetails">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetConfirmationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConcessionItemsList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetConcessionItemsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovieShowtimes">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetMovieShowtimes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetProductInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetClientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardBalanceRequest">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GiftCardBalanceRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateClient">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/CreateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/UpdateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLtyMembershipConcessionItem">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetLtyMembershipConcessionItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingList">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetConfigSettingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHistory">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetOrderHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCinemaSiteGroups">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetCinemaSiteGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConcessionPrintStreams">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetConcessionPrintStreams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionSeatPlan">
+      <soap:operation soapAction="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1/GetSessionSeatPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataService">
+    <wsdl:port name="DataService" binding="tns:DataService">
+      <soap:address location="https://webservice.albacinema.com.gt/WSVistaWebClient/DataService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

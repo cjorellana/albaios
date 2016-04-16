@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://webservice.albacinema.com.gt/WSVistaWebClient/DataService.asmx?wsdl" docRef="https://webservice.albacinema.com.gt/WSVistaWebClient/DataService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://webservice.albacinema.com.gt/WSVistaWebClient/DataService.asmx" xmlns:q1="http://vista.co.nz/services/WSVistaWebClient.ServiceContracts/1" binding="q1:DataService" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

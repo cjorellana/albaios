@@ -1,0 +1,5 @@
+﻿<Properties StartupItem="REFrostedViewControllerExample/REFrostedViewControllerExample.csproj">
+  <DisabledProjects>
+    <String>REFrostedViewControllerExample/REFrostedViewControllerExample.csproj</String>
+  </DisabledProjects>
+</Properties>
