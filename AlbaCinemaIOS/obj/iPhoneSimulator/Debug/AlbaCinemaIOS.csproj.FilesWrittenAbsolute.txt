@@ -35,3 +35,8 @@
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/AlbaCinemaIOS.exe.mdb
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/REFrostedViewController.dll
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/alba.png

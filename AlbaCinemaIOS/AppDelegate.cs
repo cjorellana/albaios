@@ -135,8 +135,8 @@ namespace AlbaCinemaIOS
 			var navigationController = new RENavigationController(aRootVC);
 			var menuController = new REFrostedMenuViewController()
 			{
-				Avatar = UIImage.FromBundle(@"monkey.png"),
-				AvatarName = @"Xamarin Monkey",
+				Avatar = UIImage.FromBundle(@"alba.png"),
+				AvatarName = @"Alba Cinema",
 				Sections = sections,
 			};
 
