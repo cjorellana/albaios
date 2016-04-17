@@ -41,3 +41,14 @@
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/alba.png
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/cartelera.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-60@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Default.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Default@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Default-568h@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-72.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-76.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small-50.png

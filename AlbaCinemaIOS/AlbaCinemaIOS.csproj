@@ -226,6 +226,17 @@
     <BundleResource Include="Resources\home-48%402x.png" />
     <BundleResource Include="Resources\alba.png" />
     <BundleResource Include="Resources\cartelera.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-Small-50.png" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />
