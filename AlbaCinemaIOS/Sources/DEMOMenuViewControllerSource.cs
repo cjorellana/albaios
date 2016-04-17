@@ -111,7 +111,7 @@ namespace AlbaCinemaIOS.Sources
 		public override void WillDisplay(UITableView tableView, UITableViewCell cell, NSIndexPath indexPath)
 		{
 			// 
-			cell.BackgroundColor = UIColor.Clear;
+			//cell.BackgroundColor = UIColor.Clear;
 			cell.TextLabel.TextColor =  UIColor.FromRGBA(62/255.0f,68/255.0f,75/255.0f,1.0f);
 			cell.TextLabel.Font = UIFont.FromName(@"HelveticaNeue",17);
 		}

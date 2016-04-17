@@ -40,3 +40,4 @@
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/alba.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/cartelera.png

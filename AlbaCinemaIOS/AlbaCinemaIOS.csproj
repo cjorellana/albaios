@@ -225,6 +225,7 @@
     <BundleResource Include="Resources\business_contact-48%402x.png" />
     <BundleResource Include="Resources\home-48%402x.png" />
     <BundleResource Include="Resources\alba.png" />
+    <BundleResource Include="Resources\cartelera.png" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />

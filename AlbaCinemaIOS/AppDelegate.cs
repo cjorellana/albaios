@@ -42,7 +42,7 @@ namespace AlbaCinemaIOS
 						new REMenuViewControllerItem()
 						{
 							//View exisiting view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"home-48"),
+							Icon = UIImage.FromBundle(@"cartelera"),
 							Title = @"Cartelera",
 							ViewController = aRootVC,
 						},
