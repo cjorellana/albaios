@@ -1,28 +1,9 @@
 ﻿<Properties StartupItem="AlbaCinemaIOS/AlbaCinemaIOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.3" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AlbaCinemaIOS/Controllers/EstrenosViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AlbaCinemaIOS/AppDelegate.cs">
     <Files>
-      <File FileName="AlbaCinemaIOS/Controllers/DEMOHomeViewController.cs" Line="25" Column="24" />
-      <File FileName="AlbaCinemaIOS/Controllers/EstrenosViewController.cs" Line="37" Column="37" />
-      <File FileName="AlbaCinemaIOS/Services/DataService.cs" Line="19" Column="5" />
-      <File FileName="AlbaCinemaIOS/Services/TicketingService.cs" Line="313" Column="3" />
+      <File FileName="AlbaCinemaIOS/AppDelegate.cs" Line="153" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="AlbaCinemaIOS" expanded="True">
-            <Node name="AlbaCinemaIOS" expanded="True" selected="True">
-              <Node name="WebReferences" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Sources" expanded="True" />
-              <Node name="XML" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
