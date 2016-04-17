@@ -21,3 +21,17 @@
 /Users/cjorellana/Projects/AlbaCinemaIOS/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/AlbaCinemaIOS.exe.mdb
 /Users/cjorellana/Projects/AlbaCinemaIOS/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/REFrostedViewController.dll
 /Users/cjorellana/Projects/AlbaCinemaIOS/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/ball@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/monkey.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/about-48@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/ask_question-48@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/business_contact-48@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/home-48@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/AlbaCinemaIOS.exe.mdb
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/AlbaCinemaIOS.exe
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/AlbaCinemaIOS.exe
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/AlbaCinemaIOS.exe.mdb
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/REFrostedViewController.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
