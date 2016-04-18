@@ -42,42 +42,42 @@ namespace AlbaCinemaIOS
 						new REMenuViewControllerItem()
 						{
 							//View exisiting view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"cartelera"),
+							//Icon = UIImage.FromBundle(@"cartelera"),
 							Title = @"Cartelera",
 							ViewController = aRootVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"bistro"),
+							//Icon = UIImage.FromBundle(@"bistro"),
 							Title = @"Bistro",
 							ViewController = bistroVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"estrenos"),
+							//Icon = UIImage.FromBundle(@"estrenos"),
 							Title = @"Estrenos",
 							ViewController = estrenosVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"promociones"),
+							//Icon = UIImage.FromBundle(@"promociones"),
 							Title = @"Promociones",
 							ViewController = secondVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"dulceria"),
+							//Icon = UIImage.FromBundle(@"dulceria"),
 							Title = @"Dulcería",
 							ViewController = secondVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"ubicaciones"),
+							//Icon = UIImage.FromBundle(@"ubicaciones"),
 							Title = @"Ubicaciones",
 							ViewController = secondVC,
 						},
@@ -90,19 +90,19 @@ namespace AlbaCinemaIOS
 						},
 					},
 				},
-				/*new REMenuItemSection()
+				new REMenuItemSection()
 				{
-					Title = "Friends Online",
+					Title = "Mas Opciones",
 					Items = new List<REMenuItem>()
 					{
 						new REMenuViewControllerItem()
 						{
 							//View exisiting view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"business_contact-48"),
-							Title = @"Bistro",
+							//Icon = UIImage.FromBundle(@"business_contact-48"),
+							Title = @"Contacto",
 							ViewController = secondVC,
 						},
-						new REMenuViewControllerItem()
+						/*new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
 							Icon = UIImage.FromBundle(@"business_contact-48"),
@@ -126,9 +126,9 @@ namespace AlbaCinemaIOS
 								var uiAlert = new UIAlertView("Logout","Are you sure you want to log out?",null,"No","Yes");
 								uiAlert.Show();
 							},
-						},
+						},*/
 					},
-				},*/
+				},
 			};
 
 			//build the default navigation controller and menu controller
