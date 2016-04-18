@@ -237,6 +237,12 @@
     <BundleResource Include="Resources\Icon-72.png" />
     <BundleResource Include="Resources\Icon-76.png" />
     <BundleResource Include="Resources\Icon-Small-50.png" />
+    <BundleResource Include="Resources\bistro.png" />
+    <BundleResource Include="Resources\estrenos.png" />
+    <BundleResource Include="Resources\promociones.png" />
+    <BundleResource Include="Resources\dulceria.png" />
+    <BundleResource Include="Resources\ubicaciones.png" />
+    <BundleResource Include="Resources\acercade.png" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />

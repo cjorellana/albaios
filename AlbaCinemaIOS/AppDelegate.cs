@@ -49,35 +49,35 @@ namespace AlbaCinemaIOS
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"about-48"),
+							Icon = UIImage.FromBundle(@"bistro"),
 							Title = @"Bistro",
 							ViewController = bistroVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"about-48"),
+							Icon = UIImage.FromBundle(@"estrenos"),
 							Title = @"Estrenos",
 							ViewController = estrenosVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"about-48"),
+							Icon = UIImage.FromBundle(@"promociones"),
 							Title = @"Promociones",
 							ViewController = secondVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"about-48"),
+							Icon = UIImage.FromBundle(@"dulceria"),
 							Title = @"Dulcería",
 							ViewController = secondVC,
 						},
 						new REMenuViewControllerItem()
 						{
 							//New view controller, will be reused everytime the item is selected
-							Icon = UIImage.FromBundle(@"about-48"),
+							Icon = UIImage.FromBundle(@"ubicaciones"),
 							Title = @"Ubicaciones",
 							ViewController = secondVC,
 						},

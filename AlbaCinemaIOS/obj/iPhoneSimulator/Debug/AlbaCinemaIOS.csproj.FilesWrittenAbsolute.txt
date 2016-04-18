@@ -52,3 +52,9 @@
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-72.png
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-76.png
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/Icon-Small-50.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/bistro.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/estrenos.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/promociones.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/dulceria.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/ubicaciones.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/acercade.png
