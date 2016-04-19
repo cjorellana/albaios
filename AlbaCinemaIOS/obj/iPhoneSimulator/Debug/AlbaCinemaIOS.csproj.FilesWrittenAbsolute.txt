@@ -58,3 +58,8 @@
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/dulceria.png
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/ubicaciones.png
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/acercade.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
