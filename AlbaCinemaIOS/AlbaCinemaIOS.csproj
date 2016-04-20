@@ -209,6 +209,7 @@
     <Compile Include="XML\GetMovieShowtimesClass.cs" />
     <Compile Include="XML\GetTicketTypeListClass.cs" />
     <Compile Include="Sources\EstrenosSource.cs" />
+    <Compile Include="Controllers\CarteleraViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

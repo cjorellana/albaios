@@ -30,6 +30,8 @@ namespace AlbaCinemaIOS
 			var secondVC = new DEMOSecondViewController();
 			var bistroVC = new BistroViewController();
 			var estrenosVC = new EstrenosViewController();
+			var carteleraVC = new CarteleraViewController();
+
 
 			//define the menu structure
 			var sections = new List<REMenuItemSection>()
@@ -44,7 +46,8 @@ namespace AlbaCinemaIOS
 							//View exisiting view controller, will be reused everytime the item is selected
 							//Icon = UIImage.FromBundle(@"cartelera"),
 							Title = @"Cartelera",
-							ViewController = aRootVC,
+							//ViewController = aRootVC,
+							ViewController=carteleraVC,
 						},
 						new REMenuViewControllerItem()
 						{
