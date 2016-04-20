@@ -1,10 +1,6 @@
 ﻿<Properties StartupItem="AlbaCinemaIOS/AlbaCinemaIOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.3" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AlbaCinemaIOS/AppDelegate.cs">
-    <Files>
-      <File FileName="AlbaCinemaIOS/AppDelegate.cs" Line="72" Column="69" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
