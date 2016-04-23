@@ -257,6 +257,7 @@
     <BundleResource Include="Resources\ubicaciones.png" />
     <BundleResource Include="Resources\acercade.png" />
     <BundleResource Include="Resources\fondo.jpg" />
+    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />

@@ -34,6 +34,7 @@
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/dulceria.png
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/ubicaciones.png
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/acercade.png
+/Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/hamburger.png
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/optimized/
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/AlbaCinemaIOS.exe.mdb
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/bin/iPhoneSimulator/Debug/AlbaCinemaIOS.exe
