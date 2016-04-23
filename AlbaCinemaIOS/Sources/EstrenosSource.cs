@@ -42,6 +42,7 @@ namespace AlbaCinemaIOS.Sources
 			cell.ImageView.Image = (from a in imagenes
 			                        where a.Nombre == item.Film_strURLforFilmName
 			                        select a.Imagen).FirstOrDefault ();
+			
 
 			return cell;
 		}

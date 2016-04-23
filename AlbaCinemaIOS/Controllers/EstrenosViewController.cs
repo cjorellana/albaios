@@ -47,6 +47,7 @@ namespace AlbaCinemaIOS
 			table.BackgroundColor = UIColor.Clear;
 			table.Source = new EstrenosSource(query, imagenes);
 			table.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+			table.RowHeight = 75;
 			Add (table);
 
 			NSIndexPath[] rowsToReload = new NSIndexPath[] {
