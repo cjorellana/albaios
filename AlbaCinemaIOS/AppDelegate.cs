@@ -30,6 +30,7 @@ namespace AlbaCinemaIOS
 			var secondVC = new DEMOSecondViewController();
 			var bistroVC = new BistroViewController();
 			var estrenosVC = new EstrenosViewController();
+			//var estrenosTC = (EstrenosTableController)this.Storyboard.InstantiateViewController("ViewControllerIdentifier");
 			var carteleraVC = new CarteleraViewController();
 
 

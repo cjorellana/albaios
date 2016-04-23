@@ -1,8 +1,10 @@
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/15-view-16.nib
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+/Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/EstrenosTableController.nib
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
-/Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+/Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UINavigationController-40.nib
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
 /Users/cjorellana/Xamarin/albaios/AlbaCinemaIOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist

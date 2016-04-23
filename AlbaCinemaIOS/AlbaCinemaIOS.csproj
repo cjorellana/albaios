@@ -210,6 +210,11 @@
     <Compile Include="XML\GetTicketTypeListClass.cs" />
     <Compile Include="Sources\EstrenosSource.cs" />
     <Compile Include="Controllers\CarteleraViewController.cs" />
+    <Compile Include="Controllers\BaseViewController.cs" />
+    <Compile Include="EstrenosTableController.cs" />
+    <Compile Include="EstrenosTableController.designer.cs">
+      <DependentUpon>EstrenosTableController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -247,6 +252,7 @@
     <BundleResource Include="Resources\dulceria.png" />
     <BundleResource Include="Resources\ubicaciones.png" />
     <BundleResource Include="Resources\acercade.png" />
+    <BundleResource Include="Resources\fondo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />

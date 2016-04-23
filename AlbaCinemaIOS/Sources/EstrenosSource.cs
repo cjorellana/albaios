@@ -29,6 +29,8 @@ namespace AlbaCinemaIOS.Sources
 			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
 
 			cell.TextLabel.Text = item.Movie_strName;
+			cell.BackgroundColor = UIColor.Clear;
+			cell.TextLabel.TextColor = UIColor.White;
 
 			return cell;
 		}

@@ -9,7 +9,7 @@ using AlbaCinemaIOS.Sources;
 
 namespace AlbaCinemaIOS
 {
-	public class EstrenosViewController: UIViewController
+	public class EstrenosViewController: BaseViewController
 	{
 		UITableView table;
 
@@ -23,18 +23,16 @@ namespace AlbaCinemaIOS
 
 			this.Title = @"Estrenos";
 
-			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem("Menu",UIBarButtonItemStyle.Plain,(s,e)=>
-				{
-					if (this.NavigationController is RENavigationController)
-					{
-						((RENavigationController)this.NavigationController).ShowMenu();
-					}
-				});
-
 			var query = Datos ().Result;
 
-			table = new UITableView(View.Bounds); // defaults to Plain style
+			var tamano = View.Bounds;
+			tamano.Y += this.NavigationController.NavigationBar.Frame.Size.Height + 25;
+			tamano.Height -= this.NavigationController.NavigationBar.Frame.Size.Height + 25;
+
+			table = new UITableView(tamano); // defaults to Plain style
+			table.BackgroundColor = UIColor.Clear;
 			table.Source = new EstrenosSource(query);
+			table.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			Add (table);
 		}
 
