@@ -209,7 +209,6 @@
     <Compile Include="XML\GetMovieListClass.cs" />
     <Compile Include="XML\GetMovieShowtimesClass.cs" />
     <Compile Include="XML\GetTicketTypeListClass.cs" />
-    <Compile Include="Sources\EstrenosSource.cs" />
     <Compile Include="Controllers\CarteleraViewController.cs" />
     <Compile Include="Controllers\BaseViewController.cs" />
     <Compile Include="EstrenosTableController.cs" />
@@ -218,6 +217,8 @@
     </Compile>
     <Compile Include="Cells\EstrenosCell.cs" />
     <Compile Include="Cells\Foto.cs" />
+    <Compile Include="Controllers\CinesViewController.cs" />
+    <Compile Include="Sources\PeliculasSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

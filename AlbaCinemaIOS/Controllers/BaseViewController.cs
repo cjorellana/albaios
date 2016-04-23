@@ -59,6 +59,32 @@ namespace AlbaCinemaIOS
 				return null;
 			}
 		}
+
+		protected void MostrarAlerta(bool Data, string Mensaje)
+		{
+			UIAlertView _error;
+
+			if (Data) {
+				_error = new UIAlertView ("Datos no disponibles", "Los datos no están disponibles en este momento. Por favor, intente más tarde.", null, "Ok", null);
+			} else {
+				_error = new UIAlertView ("Ocurrió un problema", Mensaje, null, "Ok", null);
+			}
+
+			_error.Show ();
+		}
+
+		protected UITableView Tabla75()
+		{
+			var tamano = View.Bounds;
+			tamano.Y += this.NavigationController.NavigationBar.Frame.Size.Height + 25;
+			tamano.Height -= this.NavigationController.NavigationBar.Frame.Size.Height + 25;
+
+			return new UITableView (tamano) {
+				BackgroundColor = UIColor.Clear,
+				SeparatorStyle = UITableViewCellSeparatorStyle.None,
+				RowHeight = 75
+			};
+		}
 	}
 }
 

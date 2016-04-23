@@ -9,7 +9,7 @@ using AlbaCinemaIOS.Sources;
 
 namespace AlbaCinemaIOS
 {
-	public class CarteleraViewController: UIViewController
+	public class CarteleraViewController: BaseViewController
 	{
 
 		UITableView table;
@@ -18,23 +18,26 @@ namespace AlbaCinemaIOS
 		{
 		}
 
-		public override void ViewDidLoad()
+		public override async void ViewDidLoad()
 		{
 			base.ViewDidLoad ();
 			this.Title = @"Cartelera";
 
-			this.NavigationItem.LeftBarButtonItem = new UIBarButtonItem("Menu",UIBarButtonItemStyle.Plain,(s,e)=>
-				{
-					if (this.NavigationController is RENavigationController)
-					{
-						((RENavigationController)this.NavigationController).ShowMenu();
-					}
-				});
+			var query = await Datos ();
+			var queryFotos = (from a in query
+				select a.Film_strURLforFilmName).Distinct ();
 
-			var query = Datos ().Result;
+			Foto[] imagenes = new Foto[queryFotos.Count()];
 
-			table = new UITableView(View.Bounds); // defaults to Plain style
-			table.Source = new EstrenosSource(query, new Foto[0]{});
+			for (int i = 0; i < queryFotos.Count (); i++) {
+
+				imagenes [i] = new Foto ();
+				imagenes [i].Nombre = queryFotos.ElementAt(i);
+				imagenes [i].Imagen = await LoadImage (queryFotos.ElementAt(i));
+			}
+
+			table = Tabla75 ();
+			table.Source = new PeliculasSource(query, imagenes);
 			Add (table);
 		}
 
@@ -50,6 +53,8 @@ namespace AlbaCinemaIOS
 					//BizDate = "20160217000000",
 					//BizStartTimeOfDay = 0,
 					BizStartTimeOfDay = DateTime.Now.Hour,
+					// Comentado porque no pasó por lista de cines
+					//CinemaId = _Cinema_strID,
 					OptionalClientClass = Constants.ClientClass,
 					OrderMode = "MOVIES",
 					AllSalesChannels = true
@@ -61,9 +66,9 @@ namespace AlbaCinemaIOS
 
 					if (resultingMessage.Items != null) {
 						var pelis = from a in resultingMessage.Items.AsEnumerable()
-								where a.Film_dtmOpeningDate >= DateTime.Today.AddDays(-7)
 							group a by new
 						{
+							Cinema_strID = a.Cinema_strID,
 							Movie_strID = a.Movie_strID,
 							Movie_strName = a.Movie_strName,
 							Movie_strRating = a.Movie_strRating,
@@ -71,6 +76,7 @@ namespace AlbaCinemaIOS
 						} into g
 							select new PeliculasClass()
 						{
+							Cinema_strID = g.Key.Cinema_strID,
 							Movie_strID = g.Key.Movie_strID,
 							Movie_strName = g.Key.Movie_strName,
 							Movie_strRating = g.Key.Movie_strRating,
@@ -96,21 +102,6 @@ namespace AlbaCinemaIOS
 
 			return peliculas.ToArray();
 		}
-
-		public void MostrarAlerta(bool Data, string Mensaje)
-		{
-			UIAlertView _error;
-
-			if (Data) {
-				_error = new UIAlertView ("Datos no disponibles", "Los datos no están disponibles en este momento. Por favor, intente más tarde.", null, "Ok", null);
-			} else {
-				_error = new UIAlertView ("Ocurrió un problema", Mensaje, null, "Ok", null);
-			}
-
-			_error.Show ();
-		}
-
-
 	}
 }
 

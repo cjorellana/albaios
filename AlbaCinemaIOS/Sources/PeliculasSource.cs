@@ -8,13 +8,13 @@ using System.IO;
 
 namespace AlbaCinemaIOS.Sources
 {
-	public class EstrenosSource:UITableViewSource
+	public class PeliculasSource:UITableViewSource
 	{
 		PeliculasClass[] TableItems;
 		string CellIdentifier = "TableCell";
 		Foto[] imagenes;
 
-		public EstrenosSource (PeliculasClass[] items, Foto[] Imagenes)
+		public PeliculasSource (PeliculasClass[] items, Foto[] Imagenes)
 		{
 			TableItems = items;
 			imagenes = Imagenes;
@@ -27,12 +27,12 @@ namespace AlbaCinemaIOS.Sources
 
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
-			EstrenosCell cell = tableView.DequeueReusableCell (CellIdentifier) as EstrenosCell;
+			UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
 			PeliculasClass item = TableItems[indexPath.Row];
 
 			//---- if there are no cells to reuse, create a new one
 			if (cell == null)
-			{ cell = new EstrenosCell (UITableViewCellStyle.Subtitle, CellIdentifier); }
+			{ cell = new UITableViewCell (UITableViewCellStyle.Subtitle, CellIdentifier); }
 
 			cell.BackgroundColor = UIColor.Clear;
 			cell.TextLabel.Text = item.Movie_strName;
