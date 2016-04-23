@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using AlbaCinemaIOS.Sources;
+using Foundation;
+using System.Net.Http;
 
 namespace AlbaCinemaIOS
 {
@@ -17,7 +19,7 @@ namespace AlbaCinemaIOS
 		{
 		}
 
-		public override void ViewDidLoad()
+		public override async void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 
@@ -29,11 +31,33 @@ namespace AlbaCinemaIOS
 			tamano.Y += this.NavigationController.NavigationBar.Frame.Size.Height + 25;
 			tamano.Height -= this.NavigationController.NavigationBar.Frame.Size.Height + 25;
 
+			var queryFotos = (from a in query
+			                  select a.Film_strURLforFilmName).Distinct ();
+
+			Foto[] imagenes = new Foto[queryFotos.Count()];
+
+			for (int i = 0; i < queryFotos.Count (); i++) {
+
+				imagenes [i] = new Foto ();
+				imagenes [i].Nombre = queryFotos.ElementAt(i);
+				imagenes [i].Imagen = await LoadImage (queryFotos.ElementAt(i));
+			}
+				
 			table = new UITableView(tamano); // defaults to Plain style
 			table.BackgroundColor = UIColor.Clear;
-			table.Source = new EstrenosSource(query);
+			table.Source = new EstrenosSource(query, imagenes);
 			table.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			Add (table);
+
+			NSIndexPath[] rowsToReload = new NSIndexPath[] {
+				NSIndexPath.FromRowSection(1, 0),
+				NSIndexPath.FromRowSection(3, 0), // points to second row in the first section of the model
+				NSIndexPath.FromRowSection(4, 0)
+			};
+			table.ReloadRows(rowsToReload, UITableViewRowAnimation.None);
+
+			table.SelectRow (NSIndexPath.FromRowSection(3, 0), true, UITableViewScrollPosition.None);
+
 		}
 
 		public async Task<PeliculasClass[]> Datos()
@@ -106,6 +130,25 @@ namespace AlbaCinemaIOS
 			}
 
 			_error.Show ();
+		}
+
+		public async Task<UIImage> LoadImage (string imageUrl)
+		{
+			try
+			{
+				var httpClient = new HttpClient();
+
+				Task<byte[]> contentsTask = httpClient.GetByteArrayAsync (imageUrl);
+
+				// await! control returns to the caller and the task continues to run on another thread
+				var contents = await contentsTask;
+
+				// load from bytes
+				return UIImage.LoadFromData (NSData.FromArray (contents));
+			}
+			catch(Exception) {
+				return null;
+			}
 		}
 	}
 }

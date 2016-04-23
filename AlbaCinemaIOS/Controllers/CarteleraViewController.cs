@@ -34,7 +34,7 @@ namespace AlbaCinemaIOS
 			var query = Datos ().Result;
 
 			table = new UITableView(View.Bounds); // defaults to Plain style
-			table.Source = new EstrenosSource(query);
+			table.Source = new EstrenosSource(query, new Foto[0]{});
 			Add (table);
 		}
 

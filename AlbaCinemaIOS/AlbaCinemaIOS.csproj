@@ -85,6 +85,7 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -215,6 +216,8 @@
     <Compile Include="EstrenosTableController.designer.cs">
       <DependentUpon>EstrenosTableController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cells\EstrenosCell.cs" />
+    <Compile Include="Cells\Foto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -229,6 +232,7 @@
     <Folder Include="Services\" />
     <Folder Include="Data\" />
     <Folder Include="XML\" />
+    <Folder Include="Cells\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="ball%402x.png" />
