@@ -30,8 +30,8 @@ namespace AlbaCinemaIOS
 			var secondVC = new DEMOSecondViewController();
 			var bistroVC = new BistroViewController();
 			var estrenosVC = new EstrenosViewController();
-			//var carteleraVC = new CarteleraViewController();
-			var cinesvc = new CinesViewController();
+			var carteleraVC = new CarteleraViewController();
+
 
 			//define the menu structure
 			var sections = new List<REMenuItemSection>()
@@ -47,8 +47,7 @@ namespace AlbaCinemaIOS
 							//Icon = UIImage.FromBundle(@"cartelera"),
 							Title = @"Cartelera",
 							//ViewController = aRootVC,
-							//ViewController=carteleraVC,
-							ViewController=cinesvc,
+							ViewController=carteleraVC,
 						},
 						new REMenuViewControllerItem()
 						{
@@ -136,8 +135,7 @@ namespace AlbaCinemaIOS
 			};
 
 			//build the default navigation controller and menu controller
-			var navigationController = new RENavigationController(cinesvc);
-			//var navigationController = new RENavigationController(carteleraVC);
+			var navigationController = new RENavigationController(carteleraVC);
 			var menuController = new REFrostedMenuViewController()
 			{
 				Avatar = UIImage.FromBundle(@"alba.png"),
