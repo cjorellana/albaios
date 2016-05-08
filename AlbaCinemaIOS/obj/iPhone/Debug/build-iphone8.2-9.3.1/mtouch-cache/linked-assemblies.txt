@@ -1,0 +1,15 @@
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Runtime.Serialization.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Web.Services.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Xml.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/Mono.Dynamic.Interpreter.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Data.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/AlbaCinemaIOS.exe
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/Newtonsoft.Json.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Net.Http.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Numerics.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/Xamarin.iOS.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.Core.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/mscorlib.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/REFrostedViewController.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/build-iphone8.2-9.3.1/mtouch-cache/Link/System.ServiceModel.Internals.dll

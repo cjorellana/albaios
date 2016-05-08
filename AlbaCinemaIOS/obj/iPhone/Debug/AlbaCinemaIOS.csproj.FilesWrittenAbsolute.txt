@@ -39,3 +39,12 @@
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/AlbaCinemaIOS.exe.mdb
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhone/Debug/REFrostedViewController.dll
 /Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/bin/iPhone/Debug/Newtonsoft.Json.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/ibtool/Main.storyboardc/15-view-16.nib
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/ibtool/Main.storyboardc/EstrenosTableController.nib
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/ibtool/Main.storyboardc/UINavigationController-40.nib
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/actool/partial-info.plist
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/actool/asset-manifest.plist
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/actool/bundle/LaunchImage-1-568h@2x.png
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/optimized/hamburger.png

@@ -1,4 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup />
+  <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj/iPhone/Debug/actool/bundle/LaunchImage-1.png">
+      <LogicalName>LaunchImage-1.png</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhone/Debug/actool/bundle/LaunchImage-1@2x.png">
+      <LogicalName>LaunchImage-1@2x.png</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhone/Debug/actool/bundle/LaunchImage-1-568h@2x.png">
+      <LogicalName>LaunchImage-1-568h@2x.png</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+  </ItemGroup>
 </Project>

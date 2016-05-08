@@ -1,0 +1,15 @@
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Runtime.Serialization.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Web.Services.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Xml.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/Mono.Dynamic.Interpreter.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Data.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/AlbaCinemaIOS.exe
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/Newtonsoft.Json.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Net.Http.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Numerics.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.iOS.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Core.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/mscorlib.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/REFrostedViewController.dll
+/Users/cjorellana/xamarin/albaios/AlbaCinemaIOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.ServiceModel.Internals.dll
