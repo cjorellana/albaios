@@ -27,6 +27,7 @@ namespace AlbaCinemaIOS
 
 			// ViewControllers
 			var aRootVC = new DEMOHomeViewController();
+			var cinesVC = new CinesViewController();
 			var secondVC = new DEMOSecondViewController();
 			var bistroVC = new BistroViewController();
 			var estrenosVC = new EstrenosViewController();
@@ -47,7 +48,8 @@ namespace AlbaCinemaIOS
 							//Icon = UIImage.FromBundle(@"cartelera"),
 							Title = @"Cartelera",
 							//ViewController = aRootVC,
-							ViewController=carteleraVC,
+							//ViewController=carteleraVC,
+							ViewController=cinesVC,
 						},
 						new REMenuViewControllerItem()
 						{

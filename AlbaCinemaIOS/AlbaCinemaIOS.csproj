@@ -223,6 +223,7 @@
     <Compile Include="Cells\Foto.cs" />
     <Compile Include="Controllers\CinesViewController.cs" />
     <Compile Include="Sources\PeliculasSource.cs" />
+    <Compile Include="Data\CinesClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
