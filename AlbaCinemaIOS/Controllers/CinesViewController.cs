@@ -11,12 +11,6 @@ using Newtonsoft.Json;
 
 namespace AlbaCinemaIOS
 {
-	public class CatgoriasClass
-	{
-		public Int64 CategoryID {get; set;}
-		public string CategoryName {get; set;}
-
-	}
 
 	public class CinesViewController : BaseViewController
 	{
@@ -34,12 +28,12 @@ namespace AlbaCinemaIOS
 			var query = await RefreshDataAsync ();
 
 			table = Tabla75 ();
-			table.Source = query;
+			table.Source = new CategoriaSource(query);
 			Add (table);
 		}
 
 
-		public async static Task<List<CatgoriasClass>> RefreshDataAsync ()
+		public async static Task<List<CategoriasClass>> RefreshDataAsync ()
 		{
 			HttpClient client;
 			client = new HttpClient ();
@@ -48,11 +42,11 @@ namespace AlbaCinemaIOS
 			var uri = new Uri(string.Format(surl, string.Empty));
 			var response = await client.GetAsync (uri);
 
-			List<CatgoriasClass> Items= new List<CatgoriasClass>();
+			List<CategoriasClass> Items= new List<CategoriasClass>();
 			if (response.IsSuccessStatusCode) {
 
 				var content = await response.Content.ReadAsStringAsync ();
-				Items = JsonConvert.DeserializeObject <List<CatgoriasClass>> (content);
+				Items = JsonConvert.DeserializeObject <List<CategoriasClass>> (content);
 
 			}
 
