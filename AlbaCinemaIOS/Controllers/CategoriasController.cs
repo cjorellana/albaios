@@ -11,19 +11,18 @@ using Newtonsoft.Json;
 
 namespace AlbaCinemaIOS
 {
-
-	public class CinesViewController : BaseViewController
+	public class CategoriasController: BaseViewController
 	{
 		UITableView table;
 
-		public CinesViewController ():base()
+		public CategoriasController ():base()
 		{
 		}
 
 		public override async void ViewDidLoad()
 		{
 			base.ViewDidLoad ();
-			this.Title = @"Cines";
+			this.Title = @"Categorias";
 
 			var query = await RefreshDataAsync ();
 
@@ -52,7 +51,6 @@ namespace AlbaCinemaIOS
 
 			return Items;
 		}
-
 	}
 }
 

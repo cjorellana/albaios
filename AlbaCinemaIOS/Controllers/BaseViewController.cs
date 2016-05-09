@@ -11,6 +11,7 @@ namespace AlbaCinemaIOS
 	public class BaseViewController : UIViewController
 	{
 		private const int Tamano = 36;
+		public const string surl = "http://nw.softwarecj.com/"; 
 
 		public override void ViewDidLoad() 
 		{
