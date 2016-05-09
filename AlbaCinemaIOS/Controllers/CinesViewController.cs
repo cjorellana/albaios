@@ -38,7 +38,7 @@ namespace AlbaCinemaIOS
 			HttpClient client;
 			client = new HttpClient ();
 
-			String ruta = surl + "categories";
+			String ruta = surl + "Cinemas?$format=json";
 			var uri = new Uri(string.Format(ruta, string.Empty));
 			var response = await client.GetAsync (uri);
 
