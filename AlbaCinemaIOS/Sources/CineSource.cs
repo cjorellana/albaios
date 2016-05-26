@@ -34,10 +34,24 @@ namespace AlbaCinemaIOS
 
 			cell.BackgroundColor = UIColor.Clear;
 			cell.TextLabel.Text = item.Name;
+
 			cell.TextLabel.TextColor = UIColor.White;
 			//cell.DetailTextLabel.Text = item.Movie_strRating;
 			cell.DetailTextLabel.TextColor = UIColor.LightGray;
 			return cell;
+		}
+
+		public event EventHandler<EventArgs> ItemSelected;
+		private int selectedIndex = 0;
+
+
+		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+		{
+			CinesClass item = TableItems[indexPath.Row];
+			this.selectedIndex = indexPath.Row;
+			if (this.ItemSelected != null) {
+				this.ItemSelected (this, new EventArgs ());
+			}
 		}
 	}
 }

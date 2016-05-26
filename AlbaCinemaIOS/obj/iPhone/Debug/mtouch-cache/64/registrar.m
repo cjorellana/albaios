@@ -1499,16 +1499,109 @@ static void native_to_managed_trampoline_24 (id self, SEL _cmd, MonoMethod **man
 	}
 @end
 
-@interface AlbaCinemaIOS_CinesViewController : AlbaCinemaIOS_BaseViewController {
+@interface AlbaCinemaIOS_CategoriaSource : NSObject<UIScrollViewDelegate> {
+	XamarinObject __monoObjectGCHandle;
 }
-	-(id) init;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSInteger) tableView:(id)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(id) tableView:(id)p0 cellForRowAtIndexPath:(id)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
 @end
-@implementation AlbaCinemaIOS_CinesViewController { } 
+@implementation AlbaCinemaIOS_CategoriaSource { } 
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
 
-	-(id) init
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(int) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(void) xamarinSetGCHandle: (int) gc_handle
+	{
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.native_object = self;
+	}
+
+
+	-(NSInteger) tableView:(id)p0 numberOfRowsInSection:(NSInteger)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_6 (self, _cmd, &managed_method, "AlbaCinemaIOS.CinesViewController, AlbaCinemaIOS", ".ctor");
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, p1, "UIKit.UITableView, Xamarin.iOS", "System.nint, Xamarin.iOS", "AlbaCinemaIOS.CategoriaSource, AlbaCinemaIOS", "RowsInSection");
+	}
+
+	-(id) tableView:(id)p0 cellForRowAtIndexPath:(id)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_13 (self, _cmd, &managed_method, p0, p1, "UIKit.UITableView, Xamarin.iOS", "Foundation.NSIndexPath, Xamarin.iOS", "AlbaCinemaIOS.CategoriaSource, AlbaCinemaIOS", "GetCell");
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_2 (self, _cmd, &managed_method, p0, "System.IntPtr, mscorlib", "Foundation.NSObject, Xamarin.iOS", "InvokeConformsToProtocol");
+	}
+@end
+
+@interface AlbaCinemaIOS_CineSource : NSObject<UIScrollViewDelegate> {
+	XamarinObject __monoObjectGCHandle;
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSInteger) tableView:(id)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(id) tableView:(id)p0 cellForRowAtIndexPath:(id)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+@implementation AlbaCinemaIOS_CineSource { } 
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
+
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(int) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(void) xamarinSetGCHandle: (int) gc_handle
+	{
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.native_object = self;
+	}
+
+
+	-(NSInteger) tableView:(id)p0 numberOfRowsInSection:(NSInteger)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, p0, p1, "UIKit.UITableView, Xamarin.iOS", "System.nint, Xamarin.iOS", "AlbaCinemaIOS.CineSource, AlbaCinemaIOS", "RowsInSection");
+	}
+
+	-(id) tableView:(id)p0 cellForRowAtIndexPath:(id)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_13 (self, _cmd, &managed_method, p0, p1, "UIKit.UITableView, Xamarin.iOS", "Foundation.NSIndexPath, Xamarin.iOS", "AlbaCinemaIOS.CineSource, AlbaCinemaIOS", "GetCell");
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_2 (self, _cmd, &managed_method, p0, "System.IntPtr, mscorlib", "Foundation.NSObject, Xamarin.iOS", "InvokeConformsToProtocol");
 	}
 @end
 
@@ -1549,6 +1642,26 @@ static void native_to_managed_trampoline_24 (id self, SEL _cmd, MonoMethod **man
 	{
 		static MonoMethod *managed_method = NULL;
 		return native_to_managed_trampoline_6 (self, _cmd, &managed_method, "AlbaCinemaIOS.CarteleraViewController, AlbaCinemaIOS", ".ctor");
+	}
+@end
+
+@interface AlbaCinemaIOS_CinesViewController : AlbaCinemaIOS_BaseViewController {
+}
+	-(void) viewDidLoad;
+	-(id) init;
+@end
+@implementation AlbaCinemaIOS_CinesViewController { } 
+
+	-(void) viewDidLoad
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, "AlbaCinemaIOS.CinesViewController, AlbaCinemaIOS", "ViewDidLoad");
+	}
+
+	-(id) init
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_6 (self, _cmd, &managed_method, "AlbaCinemaIOS.CinesViewController, AlbaCinemaIOS", ".ctor");
 	}
 @end
 
@@ -1602,6 +1715,26 @@ static void native_to_managed_trampoline_24 (id self, SEL _cmd, MonoMethod **man
 	{
 		static MonoMethod *managed_method = NULL;
 		return native_to_managed_trampoline_2 (self, _cmd, &managed_method, p0, "System.IntPtr, mscorlib", "Foundation.NSObject, Xamarin.iOS", "InvokeConformsToProtocol");
+	}
+@end
+
+@interface AlbaCinemaIOS_CategoriasController : AlbaCinemaIOS_BaseViewController {
+}
+	-(void) viewDidLoad;
+	-(id) init;
+@end
+@implementation AlbaCinemaIOS_CategoriasController { } 
+
+	-(void) viewDidLoad
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, "AlbaCinemaIOS.CategoriasController, AlbaCinemaIOS", "ViewDidLoad");
+	}
+
+	-(id) init
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_6 (self, _cmd, &managed_method, "AlbaCinemaIOS.CategoriasController, AlbaCinemaIOS", ".ctor");
 	}
 @end
 
@@ -2360,10 +2493,13 @@ static void native_to_managed_trampoline_24 (id self, SEL _cmd, MonoMethod **man
 		{"AlbaCinemaIOS_Controllers_BistroViewController", "AlbaCinemaIOS.Controllers.BistroViewController, AlbaCinemaIOS", NULL },
 		{"EstrenosTableController", "AlbaCinemaIOS.EstrenosTableController, AlbaCinemaIOS", NULL },
 		{"AlbaCinemaIOS_EstrenosCell", "AlbaCinemaIOS.EstrenosCell, AlbaCinemaIOS", NULL },
-		{"AlbaCinemaIOS_CinesViewController", "AlbaCinemaIOS.CinesViewController, AlbaCinemaIOS", NULL },
+		{"AlbaCinemaIOS_CategoriaSource", "AlbaCinemaIOS.CategoriaSource, AlbaCinemaIOS", NULL },
+		{"AlbaCinemaIOS_CineSource", "AlbaCinemaIOS.CineSource, AlbaCinemaIOS", NULL },
 		{"AlbaCinemaIOS_EstrenosViewController", "AlbaCinemaIOS.EstrenosViewController, AlbaCinemaIOS", NULL },
 		{"AlbaCinemaIOS_CarteleraViewController", "AlbaCinemaIOS.CarteleraViewController, AlbaCinemaIOS", NULL },
+		{"AlbaCinemaIOS_CinesViewController", "AlbaCinemaIOS.CinesViewController, AlbaCinemaIOS", NULL },
 		{"AlbaCinemaIOS_Sources_PeliculasSource", "AlbaCinemaIOS.Sources.PeliculasSource, AlbaCinemaIOS", NULL },
+		{"AlbaCinemaIOS_CategoriasController", "AlbaCinemaIOS.CategoriasController, AlbaCinemaIOS", NULL },
 		{"UIKit_UIBarButtonItem_Callback", "UIKit.UIBarButtonItem+Callback, Xamarin.iOS", NULL },
 		{"__UIGestureRecognizerToken", "UIKit.UIGestureRecognizer+Token, Xamarin.iOS", NULL },
 		{"__UIGestureRecognizerParameterlessToken", "UIKit.UIGestureRecognizer+ParameterlessDispatch, Xamarin.iOS", NULL },
@@ -2403,8 +2539,8 @@ static void native_to_managed_trampoline_24 (id self, SEL _cmd, MonoMethod **man
 		__xamarin_registration_assemblies,
 		__xamarin_class_map,
 		15,
-		81,
-		27
+		84,
+		30
 	};
 
 void xamarin_create_classes () {
@@ -2472,23 +2608,26 @@ void xamarin_create_classes () {
 	__xamarin_class_map [61].handle = [AlbaCinemaIOS_Controllers_BistroViewController class];
 	__xamarin_class_map [62].handle = [EstrenosTableController class];
 	__xamarin_class_map [63].handle = [AlbaCinemaIOS_EstrenosCell class];
-	__xamarin_class_map [64].handle = [AlbaCinemaIOS_CinesViewController class];
-	__xamarin_class_map [65].handle = [AlbaCinemaIOS_EstrenosViewController class];
-	__xamarin_class_map [66].handle = [AlbaCinemaIOS_CarteleraViewController class];
-	__xamarin_class_map [67].handle = [AlbaCinemaIOS_Sources_PeliculasSource class];
-	__xamarin_class_map [68].handle = objc_getClass ("UIKit_UIBarButtonItem_Callback");
-	__xamarin_class_map [69].handle = objc_getClass ("__UIGestureRecognizerToken");
-	__xamarin_class_map [70].handle = objc_getClass ("__UIGestureRecognizerParameterlessToken");
-	__xamarin_class_map [71].handle = objc_getClass ("__UIGestureRecognizerParametrizedToken");
-	__xamarin_class_map [72].handle = objc_getClass ("__UITapGestureRecognizer");
-	__xamarin_class_map [73].handle = objc_getClass ("__UIPanGestureRecognizer");
-	__xamarin_class_map [74].handle = objc_getClass ("__NSObject_Disposer");
-	__xamarin_class_map [75].handle = objc_getClass ("UIKit_UIScrollView__UIScrollViewDelegate");
-	__xamarin_class_map [76].handle = [REFrostedViewController_REFrostedViewController class];
-	__xamarin_class_map [77].handle = [REFrostedViewController_REFrostedMenuViewController class];
-	__xamarin_class_map [78].handle = [REFrostedViewController_REFrostedViewControllerSource class];
-	__xamarin_class_map [79].handle = [REFrostedViewController_RENavigationController class];
-	__xamarin_class_map [80].handle = [REFrostedViewController_REFrostedContainerViewController class];
+	__xamarin_class_map [64].handle = [AlbaCinemaIOS_CategoriaSource class];
+	__xamarin_class_map [65].handle = [AlbaCinemaIOS_CineSource class];
+	__xamarin_class_map [66].handle = [AlbaCinemaIOS_EstrenosViewController class];
+	__xamarin_class_map [67].handle = [AlbaCinemaIOS_CarteleraViewController class];
+	__xamarin_class_map [68].handle = [AlbaCinemaIOS_CinesViewController class];
+	__xamarin_class_map [69].handle = [AlbaCinemaIOS_Sources_PeliculasSource class];
+	__xamarin_class_map [70].handle = [AlbaCinemaIOS_CategoriasController class];
+	__xamarin_class_map [71].handle = objc_getClass ("UIKit_UIBarButtonItem_Callback");
+	__xamarin_class_map [72].handle = objc_getClass ("__UIGestureRecognizerToken");
+	__xamarin_class_map [73].handle = objc_getClass ("__UIGestureRecognizerParameterlessToken");
+	__xamarin_class_map [74].handle = objc_getClass ("__UIGestureRecognizerParametrizedToken");
+	__xamarin_class_map [75].handle = objc_getClass ("__UITapGestureRecognizer");
+	__xamarin_class_map [76].handle = objc_getClass ("__UIPanGestureRecognizer");
+	__xamarin_class_map [77].handle = objc_getClass ("__NSObject_Disposer");
+	__xamarin_class_map [78].handle = objc_getClass ("UIKit_UIScrollView__UIScrollViewDelegate");
+	__xamarin_class_map [79].handle = [REFrostedViewController_REFrostedViewController class];
+	__xamarin_class_map [80].handle = [REFrostedViewController_REFrostedMenuViewController class];
+	__xamarin_class_map [81].handle = [REFrostedViewController_REFrostedViewControllerSource class];
+	__xamarin_class_map [82].handle = [REFrostedViewController_RENavigationController class];
+	__xamarin_class_map [83].handle = [REFrostedViewController_REFrostedContainerViewController class];
 	xamarin_add_registration_map (&__xamarin_registration_map);
 }
 

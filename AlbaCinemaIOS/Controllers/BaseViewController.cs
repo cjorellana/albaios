@@ -88,6 +88,18 @@ namespace AlbaCinemaIOS
 				RowHeight = 75
 			};
 		}
+		protected UITableView Tabla(int alto)
+		{
+			var tamano = View.Bounds;
+			tamano.Y += this.NavigationController.NavigationBar.Frame.Size.Height + 25;
+			tamano.Height -= this.NavigationController.NavigationBar.Frame.Size.Height + 25;
+
+			return new UITableView (tamano) {
+				BackgroundColor = UIColor.Clear,
+				SeparatorStyle = UITableViewCellSeparatorStyle.None,
+				RowHeight = alto
+			};
+		}
 	}
 }
 

@@ -28,7 +28,7 @@ namespace AlbaCinemaIOS
 
 			var query = await RefreshDataAsync ();
 
-			table = Tabla75 ();
+			table = Tabla(50);
 			table.Source = new CineSource(query);
 			Add (table);
 		}
