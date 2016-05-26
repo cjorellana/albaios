@@ -137,7 +137,8 @@ namespace AlbaCinemaIOS
 			};
 
 			//build the default navigation controller and menu controller
-			var navigationController = new RENavigationController(carteleraVC);
+			//var navigationController = new RENavigationController(carteleraVC);
+			var navigationController = new RENavigationController(cinesVC);
 			var menuController = new REFrostedMenuViewController()
 			{
 				Avatar = UIImage.FromBundle(@"alba.png"),

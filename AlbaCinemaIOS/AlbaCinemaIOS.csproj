@@ -227,6 +227,7 @@
     <Compile Include="Sources\CategoriaSource.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Data\CategoriasClass.cs" />
+    <Compile Include="Sources\CineSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

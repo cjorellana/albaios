@@ -8,6 +8,7 @@ using System.Linq;
 using AlbaCinemaIOS.Sources;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AlbaCinemaIOS
 {
@@ -28,30 +29,48 @@ namespace AlbaCinemaIOS
 			var query = await RefreshDataAsync ();
 
 			table = Tabla75 ();
-			table.Source = new CategoriaSource(query);
+			table.Source = new CineSource(query);
 			Add (table);
 		}
 
 
-		public async static Task<List<CategoriasClass>> RefreshDataAsync ()
+		public async static Task<List<CinesClass>> RefreshDataAsync ()
 		{
 			HttpClient client;
 			client = new HttpClient ();
 
-			String ruta = surl + "Cinemas?$format=json";
+			String ruta = surl + "cines";
 			var uri = new Uri(string.Format(ruta, string.Empty));
 			var response = await client.GetAsync (uri);
 
-			List<CategoriasClass> Items= new List<CategoriasClass>();
+			List<CinesClass> Items= new List<CinesClass>();
 			if (response.IsSuccessStatusCode) {
 
 				var content = await response.Content.ReadAsStringAsync ();
-				Items = JsonConvert.DeserializeObject <List<CategoriasClass>> (content);
+				Items = JsonConvert.DeserializeObject <List<CinesClass>> (content);
 
 			}
 
+			int no = Items.Count - 1;
+			for (int i = 0; i <= no; i++)
+			{
+				string nombre = Items [i].Name;
+				nombre = nombre.Replace ("Ã³", "ó");
+				nombre = nombre.Replace ("Ã", "í");
+				nombre = nombre.Replace ("í¡", "á");
+				nombre = nombre.Replace ("Ã¡", "á");
+				nombre = nombre.Replace ("Ã¡", "á");
+				nombre = nombre.Replace ("Ã©", "é");
+				nombre = nombre.Replace ("í©", "é");
+				Items[i].Name=nombre;
+			}
+
+			//string x = Items [0].Name;
+
 			return Items;
 		}
+
+
 
 	}
 }
